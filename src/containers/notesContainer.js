@@ -10,7 +10,7 @@ class TransactionsContainer extends Component {
         return (
             <div>
                 Notes container
-                <NotesForm/>
+                <NotesForm pet={this.props.pet}/>
                 <Notes notes={this.props.pet && this.props.pet.notes}/>
             </div>
         );
