@@ -1,4 +1,4 @@
-export default function reducer(state = {pets: ""}, action){
+export default function reducer(state = {pets: []}, action){
     switch(action.type) {
         case 'FETCH_PETS':
             return {...state, pets: action.payload};

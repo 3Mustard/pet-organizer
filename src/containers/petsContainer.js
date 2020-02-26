@@ -7,6 +7,7 @@ import {fetchPets} from "../actions/fetchPets";
 
 //components & containers
 import PetForm from "../components/petForm";
+import Pets from "../components/pets";
 
 class PetsContainer extends Component {
 
@@ -19,6 +20,7 @@ class PetsContainer extends Component {
             <div>
                 <p>pet's container</p>
                 <PetForm />
+                <Pets pets={this.props.pets}/>
             </div>
         )
     }
