@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import {connect} from 'react-redux';
+import {Link} from 'react-router-dom';
 
 //functions
 import {addNote} from "../actions/addNote";
@@ -32,6 +33,7 @@ class NotesForm extends Component {
     render() {
         return (
             <div>
+                - <Link to={`/pets/${this.state.destination}`}>Cancel</Link>
                 <form onSubmit={this.handleSubmit}>
                     <label>Title: </label>
                     <input type="text" placeholder="Title" name="title" value={this.state.title} onChange={this.handleChange}/>

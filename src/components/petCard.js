@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import {Link} from 'react-router-dom';
 
 import NotesContainer from "../containers/notesContainer";
 import FeedingForm from "./FeedingForm";
@@ -10,6 +11,9 @@ const PetCard = (props) => {
     if(pet){
         return (
             <div>
+                <Link to={`/pets/`}>Back To All Pets</Link>
+                <br/>
+                <br/>
                 <p>Name: {pet.name}</p>
                 <p>Gender: {pet.gender}</p>
                 <FeedingForm pet={pet}/>
