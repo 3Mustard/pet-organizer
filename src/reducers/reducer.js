@@ -1,7 +1,9 @@
-export default function reducer(state = {pets: []}, action){
+export default function reducer(state = {pets: [], notes: []}, action){
     switch(action.type) {
         case 'FETCH_PETS':
             return {...state, pets: action.payload};
+        case 'FETCH_NOTES':
+            return {...state, notes: action.payload};
         case 'ADD_PET':
             return {...state, pets: [...state.pets, action.payload]};
         case 'ADD_NOTE':

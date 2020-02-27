@@ -18,9 +18,10 @@ class PetsContainer extends Component {
     render(){
         return (
             <div>
-                <p>pet's container</p>
-                <PetForm />
-                <Pets pets={this.props.pets}/>
+                <Switch>
+                    <Route path='/pets/new' component={PetForm}/>
+                    <Route path='/pets' render={(routerProps) => <Pets {...routerProps} pets={this.props.pets}/>}/>
+                </Switch>
             </div>
         )
     }

@@ -7,7 +7,7 @@ import {addNote} from "../actions/addNote";
 class NotesForm extends Component {
 
     state = {
-        pet_id: this.props.pet.id,
+        destination: this.props.pet.id,
         title: '',
         body: ''
     };
@@ -19,10 +19,10 @@ class NotesForm extends Component {
     }
 
     handleSubmit = (e) => {
-        e.preventDefault(); //prevent page reload
-        this.props.addNote(this.state); //add new account to db
-        this.setState({ //reset state for new form submission
-            pet_id: this.props.pet.id,
+        e.preventDefault();
+        this.props.addNote(this.state);
+        this.setState({
+            destination: this.props.pet.id,
             title: '',
             body: ''
         });
@@ -32,9 +32,9 @@ class NotesForm extends Component {
         return (
             <div>
                 <form onSubmit={this.handleSubmit}>
-                    <label>Pet Name: </label>
+                    <label>Title: </label>
                     <input type="text" placeholder="Title" name="title" value={this.state.title} onChange={this.handleChange}/>
-                    <label>Gender: </label>
+                    <label>Body: </label>
                     <input type="text-field" placeholder="Body" name="body" value={this.state.body} onChange={this.handleChange}/>
                     <input type="submit"/>
                 </form>
