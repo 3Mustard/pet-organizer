@@ -1,18 +1,26 @@
-import React from 'react';
+import React, { Component } from 'react';
+
+import NotesContainer from "../containers/notesContainer";
+import FeedingForm from "./FeedingForm";
 
 const PetCard = (props) => {
 
-    let pet = props.pet;
+    let pet = props.pets[props.match.params.id - 1];
 
-    return (
-        <div>
-            <p>Name: {pet.name}</p>
-            <p>Gender: {pet.gender}</p>
-            <p>Last Ate On: {pet.last_fed}</p>
-            <p>Next Feeding On: {pet.next_feeding}</p>
-            <p>button to edit feeding details</p>
-        </div>
-    );
+    if(pet){
+        return (
+            <div>
+                <p>Name: {pet.name}</p>
+                <p>Gender: {pet.gender}</p>
+                <FeedingForm pet={pet}/>
+                <NotesContainer pet={pet}/>
+            </div>
+        );
+    }else{
+        return (
+            <div></div>
+        )
+    }
 };
 
 export default PetCard;

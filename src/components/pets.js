@@ -1,8 +1,5 @@
 import React from 'react';
-
-//components and containers
-import PetCard from "./petCard";
-import NotesContainer from "../containers/notesContainer"
+import {Route, Link} from 'react-router-dom';
 
 const Pets = (props) => {
 
@@ -10,12 +7,10 @@ const Pets = (props) => {
         <div>
             {props.pets.map(pet =>
                 <li key={pet.id}>
-                    <PetCard pet={pet}/>
-                    <p>button to view notes</p>
-                    <NotesContainer pet={pet} />
+                    <Link to={`/pets/${pet.id}`}>{pet.name}</Link>
                 </li> )}
         </div>
     )
 };
-//notesontainer should be a link to
+
 export default Pets;
