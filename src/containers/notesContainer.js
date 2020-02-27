@@ -1,12 +1,12 @@
+//Dependencies
 import React, { Component } from 'react';
 import {connect} from 'react-redux';
 import {Link, Route, Switch} from 'react-router-dom';
-
+//Components
 import NotesForm from "../components/notesForm";
 import Notes from "../components/notes";
-
+//Actions
 import {fetchNotes} from "../actions/fetchNotes";
-import PetCard from "../components/petCard";
 
 //receives prop: pet
 class NotesContainer extends Component {
@@ -22,7 +22,7 @@ class NotesContainer extends Component {
                 <br/>
                 <Switch>
                     <Route path='/pets/:id/notes/new' render={(routerProps) => <NotesForm {...routerProps}/>}/>
-                    <Route path='/pets/:id' render={(routerProps) => <Notes {...routerProps} notes={this.props.notes}/>}/>
+                    <Route path='/pets/:id' render={(routerProps) => <Notes {...routerProps} notes={this.props.notes} pet_id={this.props.pet.id}/>}/>
                 </Switch>
             </div>
         );

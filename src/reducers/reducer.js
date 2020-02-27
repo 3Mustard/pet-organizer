@@ -8,6 +8,12 @@ export default function reducer(state = {pets: [], notes: []}, action){
             return {...state, pets: [...state.pets, action.payload]};
         case 'ADD_NOTE':
             return  {...state, notes: [...state.notes, action.payload]};
+        case 'DELETE_NOTE':
+            let notes = state.notes.map(note => {
+                if (note && note.id !== action.payload) {
+                    return note;
+                }});
+            return {...state, notes: notes};
         case 'UPDATE_PET':
             let pets2 = state.pets.map(pet => {
                if (pet.id === action.payload.id) {
