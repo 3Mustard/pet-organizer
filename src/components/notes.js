@@ -2,7 +2,7 @@ import React from 'react';
 import {Link} from "react-router-dom";
 
 const Notes = (props) => {
-    let notes = props.notes
+    let notes = props.notes.reverse();
     return (
         <div>
             {notes.map(note =>

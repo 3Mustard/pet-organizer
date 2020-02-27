@@ -10,6 +10,6 @@ export const addNote = (data) => {
             body: JSON.stringify(data)
         })
             .then(response => response.json())
-            .then(pet => dispatch({type: 'ADD_NOTE', payload: pet}));
+            .then(note => dispatch({type: 'ADD_NOTE', payload: note}));
     };
 };

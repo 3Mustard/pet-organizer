@@ -18,6 +18,7 @@ class NotesContainer extends Component {
             <div>
                 <h2>Notes</h2>
                 <br/>
+                <NotesForm pet_id={this.props.pet.id}/>
                 <Notes notes={this.props.notes}/>
             </div>
         );

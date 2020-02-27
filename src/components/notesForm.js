@@ -7,26 +7,26 @@ import {addNote} from "../actions/addNote";
 class NotesForm extends Component {
 
     state = {
-        destination: this.props.pet.id,
+        destination: this.props.pet_id,
         title: '',
-        body: ''
+        body: '',
     };
 
     handleChange = (e) => {
         this.setState({
             [e.target.name]: e.target.value
         });
-    }
+    };
 
     handleSubmit = (e) => {
         e.preventDefault();
         this.props.addNote(this.state);
         this.setState({
-            destination: this.props.pet.id,
+            destination: this.props.pet_id,
             title: '',
-            body: ''
+            body: '',
         });
-    }
+    };
 
     render() {
         return (

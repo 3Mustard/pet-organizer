@@ -5,7 +5,7 @@ import {connect} from 'react-redux';
 import {updateFeeding} from "../actions/updateFeeding";
 
 class FeedingForm extends Component {
-
+    
     state = {
         destination: this.props.pet.id,
         last_fed: '',
