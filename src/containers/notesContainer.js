@@ -5,8 +5,6 @@ import NotesForm from "../components/notesForm";
 import Notes from "../components/notes";
 
 import {fetchNotes} from "../actions/fetchNotes";
-import Pets from "../components/pets";
-import {Route} from "react-router-dom";
 
 //receives prop: pet
 class NotesContainer extends Component {
@@ -18,7 +16,9 @@ class NotesContainer extends Component {
     render() {
         return (
             <div>
-                notes container
+                <h2>Notes</h2>
+                <br/>
+                <Notes notes={this.props.notes}/>
             </div>
         );
     }

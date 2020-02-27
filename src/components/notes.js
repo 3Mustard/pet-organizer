@@ -1,10 +1,16 @@
 import React from 'react';
+import {Link} from "react-router-dom";
 
 const Notes = (props) => {
-    console.log(props)
+    let notes = props.notes
     return (
         <div>
-            notes
+            {notes.map(note =>
+                <li key={note.id}>
+                    <h5>{note.title}</h5>
+                    <br/>
+                    <p>{note.body}</p>
+                </li> )}
         </div>
     )
 };
