@@ -7,7 +7,7 @@ import {addNote} from "../actions/addNote";
 class NotesForm extends Component {
 
     state = {
-        destination: this.props.pet_id,
+        destination: this.props.match.params.id,
         title: '',
         body: '',
     };
@@ -22,10 +22,11 @@ class NotesForm extends Component {
         e.preventDefault();
         this.props.addNote(this.state);
         this.setState({
-            destination: this.props.pet_id,
+            destination: this.props.match.params.id,
             title: '',
             body: '',
         });
+        this.props.history.push(`/pets/${this.state.destination}`);
     };
 
     render() {
