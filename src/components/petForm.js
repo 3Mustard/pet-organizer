@@ -28,6 +28,7 @@ class PetForm extends Component {
             last_fed: '',
             next_feeding: ''
         });
+        this.props.history.push('/pets');
     }
 
     render() {

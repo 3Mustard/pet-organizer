@@ -32,11 +32,9 @@ class FeedingForm extends Component {
             <div>
                 <form onSubmit={this.handleSubmit}>
                     <label>Last Fed On: {this.props.pet.last_fed} </label>
-                    <input type="text" placeholder="mm-dd-yyyy" name="last_fed" value={this.state.last_fed} onChange={this.handleChange}/>
-                    <br/>
+                    <input type="text" placeholder="Update last fed date" name="last_fed" value={this.state.last_fed} onChange={this.handleChange}/> <br/>
                     <label>Next Feeding On: {this.props.pet.next_feeding} </label>
-                    <input type="text" placeholder="mm-dd-yyyy" name="next_feeding" value={this.state.next_feeding} onChange={this.handleChange}/>
-                    <br/>
+                    <input type="text" placeholder="Update next feeding" name="next_feeding" value={this.state.next_feeding} onChange={this.handleChange}/> <br/> <br/>
                     <input type="submit" value="Change Feeding Dates"/>
                 </form>
             </div>

@@ -14,6 +14,12 @@ export default function reducer(state = {pets: [], notes: []}, action){
                     return note;
                 }});
             return {...state, notes: notes};
+        case 'DELETE_PET':
+            let pets = state.pets.map(pet => {
+                if (pet && pet.id !== action.payload) {
+                    return pet;
+                }});
+            return {...state, pets: pets};
         case 'UPDATE_PET':
             let pets2 = state.pets.map(pet => {
                if (pet.id === action.payload.id) {

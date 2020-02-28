@@ -1,6 +1,6 @@
 //Dependencies
 import React, { Component } from 'react';
-//Containers
+//containers & components
 import PetsContainer from "../containers/petsContainer";
 
 class App extends Component {

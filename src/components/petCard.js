@@ -10,13 +10,10 @@ const PetCard = (props) => {
 
     if(pet){
         return (
-            <div>
-                <Link to={`/pets/`}>Back To All Pets</Link>
-                <br/>
-                <br/>
+            <div class="card-body">
                 <p>Name: {pet.name}</p>
                 <p>Gender: {pet.gender}</p>
-                <FeedingForm pet={pet}/>
+                <FeedingForm pet={pet}/> <br/>
                 <NotesContainer pet={pet}/>
             </div>
         );
