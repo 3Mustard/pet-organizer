@@ -1,8 +1,8 @@
-import React, { Component } from 'react';
-import {Link} from 'react-router-dom';
+import React from 'react';
+import {connect} from "react-redux";
 
-import NotesContainer from "../containers/notesContainer";
-import FeedingForm from "./FeedingForm";
+import NotesContainer from "../../containers/notesContainer";
+import FeedingForm from "./Forms/FeedingForm";
 
 const PetCard = (props) => {
 
@@ -10,7 +10,7 @@ const PetCard = (props) => {
 
     if(pet){
         return (
-            <div class="card-body">
+            <div>
                 <p>Name: {pet.name}</p>
                 <p>Gender: {pet.gender}</p>
                 <FeedingForm pet={pet}/> <br/>
@@ -24,4 +24,10 @@ const PetCard = (props) => {
     }
 };
 
-export default PetCard;
+const mapStateToProps = state => {
+    return {
+        pets: state.pets
+    };
+}
+
+export default connect(mapStateToProps)(PetCard);

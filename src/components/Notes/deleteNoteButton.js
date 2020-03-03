@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import {connect} from 'react-redux';
 
 //functions
-import {deleteNote} from "../actions/deleteNote";
+import {deleteNote} from "../../actions/Destroy/deleteNote";
 
 class DeleteNoteButton extends Component {
 

@@ -1,5 +1,8 @@
+//dependencies
 import React from 'react';
 import {Route, Link} from 'react-router-dom';
+import {connect} from "react-redux";
+//components
 import DeletePet from "./deletePet";
 
 const Pets = (props) => {
@@ -22,4 +25,10 @@ const Pets = (props) => {
     )
 };
 
-export default Pets;
+const mapStateToProps = state => {
+    return {
+        pets: state.pets
+    };
+};
+
+export default connect(mapStateToProps)(Pets);

@@ -1,33 +1,57 @@
+//dependencies
 import React, { Component } from 'react';
 import {connect} from 'react-redux';
 import {Route, Switch} from 'react-router-dom';
 
 //fetch function
-import {fetchPets} from "../actions/fetchPets";
+import {fetchPets} from "../actions/Fetch/fetchPets";
 
 //components & containers
-import PetForm from "../components/petForm";
-import Pets from "../components/pets";
-import PetCard from "../components/petCard";
-import DeletePet from "../components/deletePet";
-import NavBar from "../components/navBar"
+import PetForm from "../components/Pets/Forms/petForm";
+import Pets from "../components/Pets/pets";
+import PetCard from "../components/Pets/petCard";
+import DeletePet from "../components/Pets/deletePet";
+import Toolbar from "../components/Toolbar/Toolbar";
+import SideDrawer from "../components/SideDrawer/SideDrawer";
+import Backdrop from "../components/BackDrop/BackDrop";
 
 class PetsContainer extends Component {
+    state = {sideDrawerVisible: false};
 
     componentDidMount() {
         this.props.fetchPets();
     }
 
+    drawerToggleClickHandler = () => {
+        this.setState((prevState) => {
+            return {sideDrawerVisible: !prevState.sideDrawerVisible};
+        });
+    };
+
+    backdropClickHandler = () => {
+        this.setState({sideDrawerVisible: false})
+    };
+
     render(){
+        let backDrop;
+
+        if (this.state.sideDrawerVisible) {
+            backDrop = <Backdrop click={this.backdropClickHandler}/>;
+        }
+
         return (
-            <div>
-                <NavBar/>
-                <Switch>
-                    <Route path='/pets/new' component={PetForm}/>
-                    <Route path='/pets/:id/delete' render={(routerProps) => <DeletePet {...routerProps} pets={this.props.pets}/>}/>
-                    <Route path='/pets/:id' render={(routerProps) => <PetCard {...routerProps} pets={this.props.pets}/>}/>
-                    <Route path='/pets' render={(routerProps) => <Pets {...routerProps} pets={this.props.pets}/>}/>
-                </Switch>
+            <div style={{height: '100%'}}>
+                <Toolbar drawerClickHandler={this.drawerToggleClickHandler}/>
+                <SideDrawer show={this.state.sideDrawerVisible}/>
+                {backDrop}
+                <main className="pets-main" style={{marginTop: '64px'}}>
+                    <Switch>
+                        <Route path='/pets/new' component={PetForm}/>
+                        <Route path='/pets/:id/delete' render={(routerProps) => <DeletePet {...routerProps} />}/>
+                        <Route path='/pets/:id' render={(routerProps) => <PetCard {...routerProps}/>} />
+                        <Route path='/pets' render={(routerProps) => <Pets {...routerProps} />}/>
+                    </Switch>
+                </main>
             </div>
         )
     }
@@ -37,6 +61,6 @@ const mapStateToProps = state => {
     return {
         pets: state.pets
     };
-}
+};
 
 export default connect(mapStateToProps, {fetchPets})(PetsContainer);

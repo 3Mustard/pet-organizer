@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import {connect} from 'react-redux';
 
 //functions
-import {updateFeeding} from "../actions/updateFeeding";
+import {updateFeeding} from "../../../actions/Update/updateFeeding";
 
 class FeedingForm extends Component {
 

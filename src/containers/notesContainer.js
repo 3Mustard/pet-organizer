@@ -3,10 +3,10 @@ import React, { Component } from 'react';
 import {connect} from 'react-redux';
 import {Link, Route, Switch} from 'react-router-dom';
 //Components
-import NotesForm from "../components/notesForm";
-import Notes from "../components/notes";
+import NotesForm from "../components/Notes/notesForm";
+import Notes from "../components/Notes/notes";
 //Actions
-import {fetchNotes} from "../actions/fetchNotes";
+import {fetchNotes} from "../actions/Fetch/fetchNotes";
 
 //receives prop: pet
 class NotesContainer extends Component {

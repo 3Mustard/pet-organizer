@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import {connect} from 'react-redux';
 
 //functions
-import {addPet} from "../actions/addPet";
+import {addPet} from "../../../actions/Create/addPet";
 
 class PetForm extends Component {
 

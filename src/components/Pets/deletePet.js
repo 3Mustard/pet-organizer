@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import {connect} from 'react-redux';
 
 //functions
-import {deletePet} from "../actions/deletePet";
+import {deletePet} from "../../actions/Destroy/deletePet";
 
 class DeletePet extends Component {
 
