@@ -17,7 +17,7 @@ class NotesContainer extends Component {
 
     render() {
         return (
-            <div>
+            <div className="notes-container">
                 <h2>Notes</h2> - <Link to={`/pets/${this.props.pet.id}/notes/new`}>Add Note</Link>
                 <br/>
                 <Switch>

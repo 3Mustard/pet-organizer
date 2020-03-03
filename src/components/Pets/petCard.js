@@ -10,7 +10,7 @@ const PetCard = (props) => {
 
     if(pet){
         return (
-            <div>
+            <div className="pet-card">
                 <p>Name: {pet.name}</p>
                 <p>Gender: {pet.gender}</p>
                 <FeedingForm pet={pet}/> <br/>

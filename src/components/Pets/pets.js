@@ -8,19 +8,21 @@ import DeletePet from "./deletePet";
 const Pets = (props) => {
 
     return (
-        <div>
-            <Link to={'/pets/new'}>Add a Pet</Link>
+        <div className="pets-index-div">
+            <Link to={'/pets/new'} style={{cursor: 'cell'}}>Add a Pet</Link>
             <h3>Pets:</h3>
+            <ul className="pets-index-ul">
             {props.pets.map(pet => {
                 if (pet) {
                     return (
                         <li key={pet.id}>
                             <Link to={`/pets/${pet.id}`}>{pet.name}</Link>
-                            <DeletePet pet_id={pet.id}/>
+                            <DeletePet pet_id={pet.id}/><br/>
                         </li>
                     )}
             })
             }
+            </ul>
         </div>
     )
 };

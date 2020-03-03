@@ -18,10 +18,8 @@ class DeleteNoteButton extends Component {
 
     render() {
         return (
-            <div>
-                <form>
-                    <input type='submit' value="Delete Note" onClick={this.handleSubmit}/>
-                </form>
+            <div className="remove-note-button" onClick={this.handleSubmit} style={{cursor: 'not-allowed'}}>
+                <small>- Remove Note</small>
             </div>
         )
     }

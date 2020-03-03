@@ -17,10 +17,8 @@ class DeletePet extends Component {
 
     render() {
         return (
-            <div>
-                <form>
-                    <input type='submit' value="Delete Pet" onClick={this.handleSubmit}/>
-                </form>
+            <div onClick={this.handleSubmit} style={{cursor: 'not-allowed'}}>
+                <small>- Remove Pet</small>
             </div>
         )
     }

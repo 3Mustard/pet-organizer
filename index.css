@@ -24,6 +24,34 @@ code {
     margin-right:auto;
 }
 
+.pet-card {
+    text-align: center;
+}
+
+.pets-index-ul {
+    list-style: none;
+    margin-left: 0;
+    padding-left: 0;
+}
+
+
+.notes-index-div ul {
+    padding-left: 0;
+    text-align: center;
+    list-style: none;
+}
+
+.note-card {
+    margin-top: 10px;
+    margin-bottom: 10px;
+    border-radius: 25px;
+    border: 2px solid cadetblue;
+}
+
+.remove-note-button {
+    color: darksalmon;
+}
+
 /*NAVBAR*/
 
 .back-drop {
@@ -101,7 +129,7 @@ code {
 }
 
 .toolbar {
-    postion: fixed;
+    position: fixed;
     top: 0;
     left: 0;
     width: 100%;

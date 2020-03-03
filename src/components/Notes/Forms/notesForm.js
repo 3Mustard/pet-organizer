@@ -38,7 +38,7 @@ class NotesForm extends Component {
                     <label>Title: </label>
                     <input type="text" placeholder="Title" name="title" value={this.state.title} onChange={this.handleChange}/>
                     <label>Note: </label>
-                    <input type="text" placeholder="enter notes here.." name="body" value={this.state.body} onChange={this.handleChange}/>
+                    <textarea type="text" placeholder="enter notes here.." name="body" rows="4" cols="20" value={this.state.body} onChange={this.handleChange}/>
                     <input type="submit"/>
                 </form>
             </div>
