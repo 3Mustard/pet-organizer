@@ -37,8 +37,8 @@ class NotesForm extends Component {
                 <form onSubmit={this.handleSubmit}>
                     <label>Title: </label>
                     <input type="text" placeholder="Title" name="title" value={this.state.title} onChange={this.handleChange}/>
-                    <label>Body: </label>
-                    <input type="text-field" placeholder="Body" name="body" value={this.state.body} onChange={this.handleChange}/>
+                    <label>Note: </label>
+                    <input type="text" placeholder="enter notes here.." name="body" value={this.state.body} onChange={this.handleChange}/>
                     <input type="submit"/>
                 </form>
             </div>

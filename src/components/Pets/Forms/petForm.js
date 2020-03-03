@@ -34,15 +34,15 @@ class PetForm extends Component {
     render() {
         return (
             <div>
-                <form onSubmit={this.handleSubmit}>
+                <form className="pet-form" onSubmit={this.handleSubmit}>
                     <label>Pet Name: </label>
-                    <input type="text" placeholder="Name" name="name" value={this.state.name} onChange={this.handleChange}/>
+                    <input type="text" placeholder="Name" name="name" value={this.state.name} onChange={this.handleChange}/> <br/> <br/>
                     <label>Gender: </label>
-                    <input type="text" placeholder="Gender" name="gender" value={this.state.gender} onChange={this.handleChange}/>
+                    <input type="text" placeholder="Gender" name="gender" value={this.state.gender} onChange={this.handleChange}/><br/> <br/>
                     <label>Last Fed ("mm-dd-yyy"): </label>
-                    <input type="text" placeholder="mm-dd-yyyy" name="last_fed" value={this.state.last_fed} onChange={this.handleChange}/>
+                    <input type="text" placeholder="mm-dd-yyyy" name="last_fed" value={this.state.last_fed} onChange={this.handleChange}/><br/> <br/>
                     <label>Next Feeding ("mm-dd-yyy"): </label>
-                    <input type="text" placeholder="mm-dd-yyyy" name="next_feeding" value={this.state.next_feeding} onChange={this.handleChange}/>
+                    <input type="text" placeholder="mm-dd-yyyy" name="next_feeding" value={this.state.next_feeding} onChange={this.handleChange}/><br/> <br/>
                     <input type="submit"/>
                 </form>
             </div>
