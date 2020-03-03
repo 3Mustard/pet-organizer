@@ -3,7 +3,7 @@ import {connect} from 'react-redux';
 import {Link} from 'react-router-dom';
 
 //functions
-import {addNote} from "../../actions/Create/addNote";
+import {addNote} from "../../../actions/Create/addNote";
 
 class NotesForm extends Component {
 

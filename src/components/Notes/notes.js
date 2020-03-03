@@ -1,6 +1,6 @@
 import React from 'react';
 
-import DeleteNoteButton from "./deleteNoteButton";
+import DeleteNoteButton from "./Buttons/deleteNoteButton";
 
 const Notes = (props) => {
     let notes = props.notes.reverse();

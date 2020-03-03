@@ -11,9 +11,9 @@ import PetForm from "../components/Pets/Forms/petForm";
 import Pets from "../components/Pets/pets";
 import PetCard from "../components/Pets/petCard";
 import DeletePet from "../components/Pets/deletePet";
-import Toolbar from "../components/Toolbar/Toolbar";
-import SideDrawer from "../components/SideDrawer/SideDrawer";
-import Backdrop from "../components/BackDrop/BackDrop";
+import Toolbar from "../components/ResponsiveNavBar/Toolbar/Toolbar";
+import SideDrawer from "../components/ResponsiveNavBar/SideDrawer/SideDrawer";
+import Backdrop from "../components/ResponsiveNavBar/BackDrop/BackDrop";
 
 class PetsContainer extends Component {
     state = {sideDrawerVisible: false};

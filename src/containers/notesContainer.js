@@ -3,7 +3,7 @@ import React, { Component } from 'react';
 import {connect} from 'react-redux';
 import {Link, Route, Switch} from 'react-router-dom';
 //Components
-import NotesForm from "../components/Notes/notesForm";
+import NotesForm from "../components/Notes/Forms/notesForm";
 import Notes from "../components/Notes/notes";
 //Actions
 import {fetchNotes} from "../actions/Fetch/fetchNotes";
