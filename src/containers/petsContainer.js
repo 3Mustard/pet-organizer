@@ -22,13 +22,15 @@ class PetsContainer extends Component {
         this.props.fetchPets();
     }
 
-    drawerToggleClickHandler = () => {
+    drawerToggleClickHandler = (e) => {
+        e.preventDefault();
         this.setState((prevState) => {
             return {sideDrawerVisible: !prevState.sideDrawerVisible};
         });
     };
 
-    backdropClickHandler = () => {
+    backdropClickHandler = (e) => {
+        e.preventDefault();
         this.setState({sideDrawerVisible: false})
     };
 

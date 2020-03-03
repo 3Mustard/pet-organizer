@@ -1,4 +1,5 @@
 import React from 'react';
+import {Link} from "react-router-dom";
 
 import SideDrawerToggleButton from '../SideDrawer/SideDrawerToggleButton'
 
@@ -12,7 +13,7 @@ const toolbar = props => (
             <div className="spacer"></div>
             <div className="toolbar_navigation-items">
                 <ul>
-                    <li><a href="/pets">Pets</a></li>
+                    <li><Link to={`/pets/`}>All Pets</Link></li>
                 </ul>
             </div>
         </nav>
