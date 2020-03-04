@@ -9,8 +9,8 @@ const Pets = (props) => {
 
     return (
         <div className="pets-index-div">
-            <Link to={'/pets/new'} style={{cursor: 'cell'}}>Add a Pet</Link>
-            <h3>Pets:</h3>
+            <h2><u>Pets</u></h2>
+            <Link to={`/pets/new`} style={{cursor: 'cell'}}><small>- Add New Pet</small></Link>
             <ul className="pets-index-ul">
             {props.pets.map(pet => {
                 if (pet) {

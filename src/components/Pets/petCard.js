@@ -5,8 +5,8 @@ import NotesContainer from "../../containers/notesContainer";
 import FeedingForm from "./Forms/FeedingForm";
 
 const PetCard = (props) => {
-
-    let pet = props.pets[props.match.params.id - 1];
+    const id = props.match.params.id;
+    let pet = props.pets.find(pet=>pet.id === parseInt(id,10));
 
     if(pet){
         return (
@@ -19,7 +19,7 @@ const PetCard = (props) => {
         );
     }else{
         return (
-            <div></div>
+            null
         )
     }
 };
@@ -28,6 +28,6 @@ const mapStateToProps = state => {
     return {
         pets: state.pets
     };
-}
+};
 
 export default connect(mapStateToProps)(PetCard);

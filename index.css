@@ -3,7 +3,6 @@ html {
 }
 
 body {
-    margin: 0;
     padding: 0;
     height: 100%;
     font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
@@ -18,13 +17,30 @@ code {
     monospace;
 }
 
+.about-div {
+    text-align: center;
+}
+
+.pets-container {
+    height: 100%;
+}
+
 .pets-main {
     display:table;
+    margin-top: 100px;
     margin-left:auto;
     margin-right:auto;
 }
 
+.pet-form-div {
+    text-align: center;
+}
+
 .pet-card {
+    text-align: center;
+}
+
+.pets-index-div {
     text-align: center;
 }
 
@@ -34,6 +50,15 @@ code {
     padding-left: 0;
 }
 
+.pets-index-ul li {
+    padding-top: 10px;
+    padding-left: 100px;
+    padding-right: 100px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    border-radius: 25px;
+    border: 2px solid cadetblue;
+}
 
 .notes-index-div ul {
     padding-left: 0;
@@ -219,7 +244,7 @@ input {
     margin-bottom: 0.5rem;
 }
 input:focus {
-    outline: 3px solid gold;
+    outline: 1px solid indianred;
 }
 
 @media (min-width: 400px) {

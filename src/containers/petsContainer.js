@@ -7,6 +7,7 @@ import {Route, Switch} from 'react-router-dom';
 import {fetchPets} from "../actions/Fetch/fetchPets";
 
 //components & containers
+import About from "../components/Information/About";
 import PetForm from "../components/Pets/Forms/petForm";
 import Pets from "../components/Pets/pets";
 import PetCard from "../components/Pets/petCard";
@@ -42,16 +43,17 @@ class PetsContainer extends Component {
         }
 
         return (
-            <div style={{height: '100%'}}>
+            <div className="pets-container">
                 <Toolbar drawerClickHandler={this.drawerToggleClickHandler}/>
                 <SideDrawer show={this.state.sideDrawerVisible}/>
                 {backDrop}
-                <main className="pets-main" style={{marginTop: '64px'}}>
+                <main className="pets-main" >
                     <Switch>
                         <Route path='/pets/new' component={PetForm}/>
                         <Route path='/pets/:id/delete' render={(routerProps) => <DeletePet {...routerProps} />}/>
                         <Route path='/pets/:id' render={(routerProps) => <PetCard {...routerProps}/>} />
                         <Route path='/pets' render={(routerProps) => <Pets {...routerProps} />}/>
+                        <Route path='/' component={About} />
                     </Switch>
                 </main>
             </div>

@@ -9,10 +9,12 @@ const toolbar = props => (
             <div className="toolbar-toggle-button">
                 <SideDrawerToggleButton click={props.drawerClickHandler}/>
             </div>
-            <div className="toolbar_logo"><a href="/">The Logo</a></div>
+            <div className="toolbar_logo"><a href="/">Pet Assistant</a></div>
             <div className="spacer"></div>
             <div className="toolbar_navigation-items">
                 <ul>
+                    <li><Link to={`/`}>Home</Link></li>
+                    <li><Link to={`/pets/new`} style={{cursor: 'cell'}}>Add Pet</Link></li>
                     <li><Link to={`/pets/`}>All Pets</Link></li>
                 </ul>
             </div>

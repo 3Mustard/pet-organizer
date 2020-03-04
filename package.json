@@ -27,7 +27,8 @@
     "redux-thunk": "^2.3.0",
     "webpack": "^4.41.6",
     "webpack-cli": "^3.3.11",
-    "webpack-dev-server": "^3.10.3"
+    "webpack-dev-server": "^3.10.3",
+    "react-router": "latest"
   },
   "devDependencies": {
     "babel-core": "^6.26.3",
@@ -37,6 +38,7 @@
     "babel-preset-es2015": "^6.24.1",
     "babel-preset-stage-0": "^6.24.1",
     "css-loader": "^3.4.2",
+    "multi-loader": "^0.1.0",
     "style-loader": "^1.1.3"
   }
 }
