@@ -13,9 +13,8 @@ const toolbar = props => (
             <div className="spacer"></div>
             <div className="toolbar_navigation-items">
                 <ul>
-                    <li><Link to={`/`}>Home</Link></li>
-                    <li><Link to={`/pets/new`} style={{cursor: 'cell'}}>Add Pet</Link></li>
                     <li><Link to={`/pets/`}>All Pets</Link></li>
+                    <li><Link to={`/pets/new`} style={{cursor: 'cell'}}>Add Pet</Link></li>
                 </ul>
             </div>
         </nav>

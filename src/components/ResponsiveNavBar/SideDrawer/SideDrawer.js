@@ -11,8 +11,8 @@ const sideDrawer = props => {
         <nav className={drawerClasses}>
             <ul>
                 <li><Link to={`/`}>Home</Link></li>
-                <li><Link to={`/pets/new`} style={{cursor: 'cell'}}>Add Pet</Link></li>
                 <li><Link to={`/pets/`}>All Pets</Link></li>
+                <li><Link to={`/pets/new`} style={{cursor: 'cell'}}>Add Pet</Link></li>
             </ul>
         </nav>
     )

@@ -91,7 +91,7 @@ code {
 
 .side-drawer {
     height: 100%;
-    background: white;
+    background: #DA7B93;
     box-shadow: 2px 0px 7px rgba(0,0,0,0.5);
     position: fixed;
     top: 0;
@@ -120,7 +120,7 @@ code {
 }
 
 .side-drawer a {
-    color: plum;
+    color: white;
     text-decoration: none;
     font-size: 1.2rem;
 }
@@ -159,7 +159,7 @@ code {
     left: 0;
     width: 100%;
     height: 56px;
-    background: cornsilk;
+    background: #DA7B93;
 }
 
 .toolbar_navigation {
@@ -174,7 +174,7 @@ code {
 }
 
 .toolbar_logo a {
-    color: black;
+    color: white;
     text-decoration: none;
     font-size: 1.5rem;
 }
@@ -195,7 +195,7 @@ code {
 }
 
 .toolbar_navigation-items a {
-    color: black;
+    color: white;
     text-decoration: none;
 }
 
