@@ -45,10 +45,10 @@ class PetForm extends Component {
                     <input type="text" placeholder="Name" name="name" value={this.state.name} onChange={this.handleChange}/> <br/>
                     <label>Gender: </label>
                     <input type="text" placeholder="Gender" name="gender" value={this.state.gender} onChange={this.handleChange}/><br/>
-                    <label>Last Fed ("mm-dd-yyy"): </label>
-                    <input type="text" placeholder="mm-dd-yyyy" name="last_fed" value={this.state.last_fed} onChange={this.handleChange}/><br/>
-                    <label>Next Feeding ("mm-dd-yyy"): </label>
-                    <input type="text" placeholder="mm-dd-yyyy" name="next_feeding" value={this.state.next_feeding} onChange={this.handleChange}/><br/>
+                    <label>Last Fed - <small><i>mm/dd/yyyy</i></small></label>
+                    <input type="text" placeholder="mm/dd/yyyy" name="last_fed" value={this.state.last_fed} onChange={this.handleChange}/><br/>
+                    <label>Next Feeding - <small><i>mm/dd/yyyy</i></small></label>
+                    <input type="text" placeholder="mm/dd/yyyy" name="next_feeding" value={this.state.next_feeding} onChange={this.handleChange}/><br/>
                 </form><br/>
                 <input type="submit" form="newPetForm" style={{cursor: 'pointer', width: '90px'}}/>
             </div>
