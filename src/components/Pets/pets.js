@@ -6,7 +6,7 @@ import {connect} from "react-redux";
 import DeletePet from "./deletePet";
 
 const Pets = (props) => {
-
+    console.log(props.pets)
     if (props.pets.length > 0){
         return (
             <div className="pets-index-div">

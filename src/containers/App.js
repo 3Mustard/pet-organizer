@@ -16,7 +16,7 @@ import Toolbar from "../components/ResponsiveNavBar/Toolbar/Toolbar";
 import SideDrawer from "../components/ResponsiveNavBar/SideDrawer/SideDrawer";
 import Backdrop from "../components/ResponsiveNavBar/BackDrop/BackDrop";
 
-class PetsContainer extends Component {
+class App extends Component {
     state = {sideDrawerVisible: false};
 
     componentDidMount() {
@@ -43,7 +43,7 @@ class PetsContainer extends Component {
         }
 
         return (
-            <div className="pets-container">
+            <div className="app-container">
                 <Toolbar drawerClickHandler={this.drawerToggleClickHandler}/>
                 <SideDrawer show={this.state.sideDrawerVisible}/>
                 {backDrop}
@@ -52,8 +52,8 @@ class PetsContainer extends Component {
                         <Route path='/pets/new' component={PetForm}/>
                         <Route path='/pets/:id/delete' render={(routerProps) => <DeletePet {...routerProps} />}/>
                         <Route path='/pets/:id' render={(routerProps) => <PetCard {...routerProps}/>} />
-                        <Route path='/pets' render={(routerProps) => <Pets {...routerProps} />}/>
-                        <Route path='/' component={About} />
+                        <Route path='/pets' component={Pets} />}/>
+                        <Route exact path='/' component={About} />
                     </Switch>
                 </main>
             </div>
@@ -61,10 +61,4 @@ class PetsContainer extends Component {
     }
 }
 
-const mapStateToProps = state => {
-    return {
-        pets: state.pets
-    };
-};
-
-export default connect(mapStateToProps, {fetchPets})(PetsContainer);
+export default connect(null, {fetchPets})(App);

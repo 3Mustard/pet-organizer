@@ -9,7 +9,7 @@ import{ BrowserRouter } from 'react-router-dom';
 //Functions
 import reducer from './reducers/reducer';
 //Components
-import PetsContainer from "./containers/petsContainer";
+import App from "./containers/App";
 
 const composeEnhancers = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose;
 
@@ -18,7 +18,7 @@ let store = createStore(reducer, composeEnhancers(applyMiddleware(thunk)));
 ReactDOM.render(
     <BrowserRouter>
         <Provider store={store}>
-            <PetsContainer/>
+            <App />
         </Provider>
     </BrowserRouter>,
     document.getElementById("root")
